@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang='zh-CN'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>给最重要的你 ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
+body{overflow:hidden;background:linear-gradient(135deg,#ff9a9e,#fad0c4);display:flex;justify-content:center;align-items:center;height:100vh}
+.card{width:90%;max-width:720px;background:rgba(255,255,255,.15);backdrop-filter:blur(15px);border-radius:20px;padding:35px;color:#fff;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+button{margin:10px;padding:14px 28px;border:none;border-radius:40px;background:#fff;color:#ff5f7e;font-size:18px;cursor:pointer}
+button:hover{transform:scale(1.05)}#hidden,#coupon{display:none;margin-top:20px}
+.heart{position:fixed;bottom:-20px;color:#fff;animation:f 8s linear forwards}@keyframes f{to{transform:translateY(-110vh);opacity:0}}
+</style></head><body><div class='card'><h1>给最重要的你 ❤️</h1><p id='typing'></p>
+<button onclick='showLove()'>点击这里</button>
+<button onclick='openCoupon()'>🎁领取和好券</button>
+<div id='hidden'><h2>❤️</h2><p>我知道过去有很多事情，是我没有做好。<br>如果还能有一次机会，我一定会更加珍惜你。<br><b>我们重新开始，好吗？🌹</b></p></div>
+<div id='coupon'><div style='background:#fff;color:#ff4f7e;border-radius:18px;padding:20px'><h2>💖 和好券 💖</h2><p>🌹 一次重新开始</p><p>🤍 无限次拥抱</p><p>🎬 一起看电影</p><p>🍜 一起吃美食</p><p>💌 每天一句早晚安</p><h3>有效期：一辈子 ❤️</h3></div>
+<script>
+const text=`这不是一个普通的网站。
+
+里面装着的，都是我最真实的心。
+
+如果还有机会，我想重新牵起你的手，陪你一直走下去。`;
+let i=0;function type(){if(i<text.length){typing.innerHTML+=text.charAt(i++);setTimeout(type,60)}}type();
+function showLove(){hidden.style.display='block';}
+function openCoupon(){coupon.style.display='block';alert("❤️ 和好券领取成功！永久有效。");}
+document.body.addEventListener('click',()=>{bgm.play().catch(()=>{});},{once:true});
+setInterval(()=>{let h=document.createElement('div');h.className='heart';h.innerHTML='❤';h.style.left=Math.random()*100+'vw';h.style.fontSize=(15+Math.random()*25)+'px';document.body.appendChild(h);setTimeout(()=>h.remove(),8000)},300);
+</script></body></html>
