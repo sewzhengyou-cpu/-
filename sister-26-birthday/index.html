@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#241934">
+<title>姐姐，26岁生日快乐 🎂</title>
+<style>
+:root{--pink:#ffd3e5;--gold:#ffe6a8;--cream:#fff8f7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100svh;color:var(--cream);background:radial-gradient(circle at 20% 10%,#6d4277 0,transparent 36%),radial-gradient(circle at 90% 80%,#594b91 0,transparent 38%),linear-gradient(135deg,#261732,#211c42 60%,#30213c);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;overflow-x:hidden}
+.bg-stars{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.65;box-shadow:0 0 10px #fff;animation:twinkle 2.5s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.15;transform:scale(.5)}to{opacity:.8;transform:scale(1.7)}}
+.shell{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:32px 18px 70px}
+.top{text-align:center;margin:15px 0 20px;color:#ffdfec;font-size:12px;letter-spacing:.28em;font-weight:700}
+.panel{text-align:center;border:1px solid #ffffff38;border-radius:30px;padding:35px 22px 38px;background:linear-gradient(150deg,#ffffff20,#ffffff0a);box-shadow:0 22px 65px #120b2670;backdrop-filter:blur(14px)}
+.pill{display:inline-block;padding:7px 15px;border-radius:100px;background:#ffffff17;border:1px solid #ffffff3f;letter-spacing:.13em;font-size:12px}
+.age{font-family:Georgia,serif;font-size:clamp(112px,28vw,190px);line-height:1.04;font-weight:700;letter-spacing:-.09em;margin:10px 20px 0 0;background:linear-gradient(155deg,#fff7de 15%,#ffc5d8 52%,#e7baff 95%);color:transparent;background-clip:text;text-shadow:0 12px 55px #ffaec541}
+h1{font-size:clamp(25px,5.6vw,43px);line-height:1.4;margin:4px 0 8px}
+.subtitle{font-size:15px;line-height:1.85;color:#f9dce9;margin:8px auto 16px;max-width:380px}
+.cake{position:relative;width:190px;height:178px;margin:24px auto 10px;filter:drop-shadow(0 13px 17px #150d24aa)}
+.plate{position:absolute;bottom:3px;width:195px;height:17px;left:-3px;background:#d5a4cc;border-radius:50%;box-shadow:inset 0 -4px #b279b1}
+.layer{position:absolute;bottom:17px;left:16px;width:158px;height:91px;border-radius:18px 18px 25px 25px;background:linear-gradient(#f6a6bc 0 18%,#ffcad2 19% 48%,#d77fa6 49% 57%,#f4b4cc 58%);box-shadow:inset -12px 0 #d783a235}
+.icing{position:absolute;bottom:91px;left:15px;width:160px;height:28px;border-radius:55% 55% 26% 26%;background:#fff0ed}
+.drip{position:absolute;bottom:78px;width:14px;height:27px;background:#fff0ed;border-radius:0 0 9px 9px}
+.d1{left:33px}.d2{left:93px;height:32px;bottom:75px}.d3{left:143px;height:22px;bottom:83px}
+.candle{position:absolute;bottom:115px;width:9px;height:44px;background:repeating-linear-gradient(35deg,#fff0dd 0 7px,#df85ac 7px 11px);border-radius:3px}
+.c1{left:55px}.c2{left:91px}.c3{left:127px}
+.flame{position:absolute;left:-5px;top:-19px;width:19px;height:22px;border-radius:60% 60% 55% 55%;background:radial-gradient(circle at 55% 66%,#fff 0 14%,#ffde79 35%,#ff9866 75%);box-shadow:0 0 17px #ffcf7c;transform-origin:bottom;animation:flicker .55s ease-in-out infinite alternate}
+@keyframes flicker{to{transform:rotate(8deg) scale(.87)}}
+.blown .flame{animation:out .55s forwards}
+@keyframes out{to{opacity:0;transform:translateY(-14px) scale(.1)}}
+.btn{appearance:none;border:0;padding:15px 26px;border-radius:999px;background:linear-gradient(110deg,#ffebba,#ffd0df);box-shadow:0 8px 24px #ffb6d440;color:#4e2745;font-size:16px;font-weight:800;cursor:pointer;transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px #ffb6d45a}
+.btn:active{transform:scale(.97)}
+.hint{margin:17px 0 0;font-size:12px;color:#e1bfd2}
+.letter{display:none;margin:24px auto 0;text-align:left;max-width:510px;background:#fff9f0;border-radius:24px;padding:26px 25px;color:#6c455d;box-shadow:0 14px 40px #130e2955;animation:appear .7s both}
+.letter.open{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+.letter .eyebrow{color:#b16b8e;text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:800}
+.letter h2{color:#9b4d73;font-size:24px;margin:10px 0 13px}
+.letter p{font-size:15px;line-height:2.05;margin:0 0 11px}
+.sign{text-align:right;font-weight:700;color:#b66c91;padding-top:5px}
+.footer{text-align:center;color:#dbc0d9;font-size:12px;margin:22px 0}
+.confetti{position:fixed;top:-16px;width:9px;height:15px;z-index:10;pointer-events:none;animation:fall var(--duration,4s) linear forwards}
+@keyframes fall{to{transform:translate3d(var(--drift,0px),110vh,0) rotate(760deg);opacity:.2}}
+@media(max-width:450px){.shell{padding:20px 12px 50px}.panel{padding:28px 13px 30px;border-radius:24px}.subtitle{font-size:14px}.letter{padding:22px 20px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="bg-stars" id="stars" aria-hidden="true"></div>
+<main class="shell">
+<div class="top">A LITTLE SURPRISE, JUST FOR YOU ✨</div>
+<section class="panel">
+<span class="pill">TO MY DEAREST SISTER ♡</span>
+<div class="age">26</div>
+<h1>姐姐，生日快乐！🎉</h1>
+<p class="subtitle">愿你被生活温柔以待，也永远有勇气奔向自己喜欢的一切。<br>今天，你就是全世界最闪亮的主角 ✨</p>
+<div class="cake" id="cake" role="img" aria-label="一个点着三根蜡烛的粉色生日蛋糕">
+<div class="plate"></div><div class="layer"></div><div class="icing"></div><div class="drip d1"></div><div class="drip d2"></div><div class="drip d3"></div>
+<div class="candle c1"><span class="flame"></span></div><div class="candle c2"><span class="flame"></span></div><div class="candle c3"><span class="flame"></span></div>
+</div>
+<button class="btn" id="wishBtn" type="button">🎂 许个愿，吹灭蜡烛</button>
+<p class="hint" id="hint">点击按钮，还有一个小惊喜等着你 💌</p>
+<article class="letter" id="letter" aria-live="polite">
+<div class="eyebrow">A birthday letter for you</div>
+<h2>亲爱的姐姐：💗</h2>
+<p>今天你26岁啦！</p>
+<p>愿新的一岁里，你想做的事都有勇气去做，想实现的梦想都一点点靠近。愿快乐常伴左右，烦恼随风散去。</p>
+<p>希望你不必时时刻刻坚强，累了就好好休息；也希望你永远保留那份热爱生活、闪闪发光的自己。</p>
+<p>谢谢你一直以来的照顾与陪伴。未来的日子，愿你健康、平安、自由、幸福，每一天都能有发自内心的笑容。</p>
+<p><strong>26岁生日快乐！不止今天，往后的每一天都要幸福呀！🎂✨</strong></p>
+<div class="sign">—— 永远爱你的我 ❤️</div>
+</article>
+</section>
+<p class="footer">Made with love · 专属于姐姐的26岁生日祝福 ♡</p>
+</main>
+<script>
+(function(){
+const stars=document.getElementById('stars');
+for(let i=0;i<60;i++){const s=document.createElement('i');s.className='star';s.style.left=(Math.random()*100)+'%';s.style.top=(Math.random()*100)+'%';s.style.animationDelay=(Math.random()*3)+'s';stars.appendChild(s)}
+const button=document.getElementById('wishBtn');
+const letter=document.getElementById('letter');
+const cake=document.getElementById('cake');
+const hint=document.getElementById('hint');
+function celebrate(){
+ const colors=['#ffe6a8','#ffd1e6','#cab9ff','#ffffff','#fda5bc','#a5e9ea'];
+ for(let i=0;i<130;i++){const c=document.createElement('span');c.className='confetti';c.style.left=(Math.random()*100)+'vw';c.style.background=colors[Math.floor(Math.random()*colors.length)];c.style.borderRadius=Math.random()>.5?'50%':'2px';c.style.setProperty('--duration',(2.8+Math.random()*3)+'s');c.style.setProperty('--drift',((Math.random()-.5)*230)+'px');c.style.animationDelay=(Math.random()*1.1)+'s';document.body.appendChild(c);setTimeout(()=>c.remove(),7100)}
+}
+button.addEventListener('click',()=>{
+cake.classList.add('blown');letter.classList.add('open');
+hint.textContent='愿你的26岁，永远闪闪发光 🌟';
+button.textContent='🎉 再撒一次生日彩纸';
+celebrate();setTimeout(()=>letter.scrollIntoView({behavior:'smooth',block:'nearest'}),500);
+});
+})();
+</script>
+</body>
+</html>
